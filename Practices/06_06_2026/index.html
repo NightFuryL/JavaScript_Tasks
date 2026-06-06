@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1
+        function minNumber(a, b) {
+            if (a < b) {
+                return a;
+            }
+            return b;
+        }
+        console.log(minNumber(5, 3));
+        // 2
+        function power(number, degree) {
+            let result = 1;
+
+            for (let i = 0; i < degree; i++) {
+                result *= number;
+            }
+
+            return result;
+        }
+        console.log(power(2, 4));
+        // 3
+        function calculate(a, b, sign) {
+            if (sign == "+") return a + b;
+            if (sign == "-") return a - b;
+            if (sign == "*") return a * b;
+            if (sign == "/") return a / b;
+        }
+        console.log(calculate(10, 5, "+"));
+        console.log(calculate(10, 5, "-"));
+        console.log(calculate(10, 5, "*"));
+        console.log(calculate(10, 5, "/"));
+        // 4
+        function isPrime(number) {
+            if (number < 2) {
+                return false;
+            }
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log(isPrime(7));
+        console.log(isPrime(10));
+        // 5
+        function multiplicationTable(number) {
+            console.log("Таблиця для " + number);
+            for (let i = 1; i <= 10; i++) {
+                console.log(number + " * " + i + " = " + (number * i));
+            }
+        }
+        for (let i = 2; i <= 9; i++) {
+            multiplicationTable(i);
+        }
+        // 6
+        function myMod(a, b) {
+
+            let division = a / b;
+            let part = parseInt(division);
+
+            return a - part * b;
+        }
+        console.log(myMod(11, 5));
+        // 7
+        function sumNumbers(...numbers) {
+
+            let sum = 0;
+
+            for (let i = 0; i < numbers.length; i++) {
+                sum += numbers[i];
+            }
+            return sum;
+        }
+        console.log(sumNumbers(1));
+        console.log(sumNumbers(1, 2, 3));
+        console.log(sumNumbers(1, 2, 3, 4, 5));
+        // 8
+        function maxNumber(...numbers) {
+            let max = numbers[0];
+            for (let i = 1; i < numbers.length; i++) {
+                if (numbers[i] > max) {
+                    max = numbers[i];
+                }
+            }
+            return max;
+        }
+        console.log(maxNumber(4));
+        console.log(maxNumber(4, 7, 2));
+        console.log(maxNumber(4, 7, 2, 15, 1));
+        // 9
+        function showNumbers(start, end, even) {
+            for (let i = start; i <= end; i++) {
+                if (even == true && i % 2 == 0) {
+                    console.log(i);
+                }
+                if (even == false && i % 2 != 0) {
+                    console.log(i);
+                }
+            }
+        }
+        showNumbers(1, 20, true);
+        showNumbers(1, 20, false);
+        // 10
+        function isLeapYear(year) {
+
+            if (year % 400 == 0) {
+                return true;
+            }
+
+            if (year % 100 == 0) {
+                return false;
+            }
+
+            if (year % 4 == 0) {
+                return true;
+            }
+
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>

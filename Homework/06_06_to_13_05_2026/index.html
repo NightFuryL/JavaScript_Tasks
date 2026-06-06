@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        function sumRange(start, end) {
+            let sum = 0;
+            for (let i = start; i <= end; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+        //console.log("sumRange(1, 10)"+sumRange(1, 10));
+        //2
+        function gcd(a, b) {
+            while (b != 0) {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+        //console.log("gcd(14, 30)" + gcd(14, 30));
+        //3
+        function ShowAllDivisors() {
+            let num = Number(prompt("Enter number: "));
+            let d = "";
+            for (let i = 1; i < num; i++) {
+                if (num % i === 0) {
+                    d += i + " ";
+                }
+            }
+            console.log("All divisors of " + num + ": " + d);
+        }
+        //ShowAllDivisors();
+        //4
+        function cDigitsInNumber() {
+            let number = Number(prompt("Enter number: "));
+            let num = number;
+            console.log(number);
+            let count = 0;
+            if (number < 0) { count = -1; }
+            if (number === 0) { count = 1; }
+            else {
+                while (number >= 1) {
+                    count++;
+                    let a = number % 10;
+                    number = (number - a) / 10;
+                }
+            }
+            console.log("Count of digits in " + num + ": " + count);
+        }
+        //cDigitsInNumber();
+        //5
+        function NumStats() {
+            let pos = 0, neg = 0, zeros = 0;
+            let even = 0, odd = 0;
+            let input;
+            for (let i = 0; i < 10; i++) {
+                input = Number(prompt("Enter num: "));
+                if (input < 0) neg++;
+                else if (input > 0) pos++;
+                else zeros++;
+                if (input % 2 === 0) even++;
+                else odd++;
+
+            }
+            console.log(
+                "Pos: " + pos + "\n" +
+                "Neg: " + neg + "\n" +
+                "Zeros: " + zeros + "\n" +
+                "Even: " + even + "\n" +
+                "Odd:" + odd + "\n"
+            );
+        }
+        //NumStats();
+        //6
+        function LoopCalc() {
+            let result;
+            let again;
+            do {
+                let n1 = Number(prompt("Num1: "));
+                let sign = prompt("Sign: ");
+                let n2 = Number(prompt("Num: "));
+                if (sign == "+") result = n1 + n2;
+                if (sign == "-") result = n1 - n2;
+                if (sign == "*") result = n1 * n2;
+                if (sign == "/") result = n1 / n2;
+                else console.log("Error");
+                console.log("Result: " + result);
+                again = confirm("Continiue?");
+            } while (again);
+        }
+        //LoopCalc();
+        //7
+        function shiftDigits() {
+            let num = prompt("Num: ");
+            let shift = Number(prompt("Shift: "));
+            shift = shift % num.length;
+            for (let i = 0; i < shift; i++) {
+                num = num.substring(1) + num[0];
+            }
+            console.log("After shift: " + num);
+        }
+        //shiftDigits();
+        //8
+        function DayOfWeek() {
+            const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            let i = 0;
+            while (confirm(days[i] + ", continue?")) {
+                i = (i + 1) % 7;
+            }
+        }
+        //DayOfWeek();
+        //9
+        function showMTable() {
+            let table = "";
+            for (let i = 2; i <= 9; i++) {
+                table += '=========================\n';
+                for (let j = 1; j <= 10; j++) {
+                    table += `${i} * ${j} = ${i * j}\n`;
+                }
+                table += "\n";
+            }
+            console.log(table);
+        }
+        //showMTable();
+        //10
+        function GuessNumber() {
+            console.log("Guess a number 0-100!");
+            let min = 0, max = 100, ans = "";
+            while (ans !== "==") {
+                let n = Math.floor(Math.random() * (max - min + 1)) + min;
+                ans = prompt(`Is your number >, < or == to ${n}?`);
+                if (ans === ">") min = n + 1;
+                else if (ans === "<") max = n - 1;
+                else if (ans === "==") console.log(`Done! Number was ${n}`);
+            }
+        }
+
+        //GuessNumber();
+
+    </script>
+</body>
+
+</html>
