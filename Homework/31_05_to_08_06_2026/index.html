@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        {
+            let name = prompt("Enter your name:");
+            alert("Hello, " + name + "!");
+        }
+        //2
+        {
+            const CURRENT_YEAR = 2026;
+            let birthYear = Number(prompt("Enter your birth year:"));
+            let age = CURRENT_YEAR - birthYear;
+            alert("Your age: " + age);
+        }
+        //3
+        {
+            let side = Number(prompt("Enter the side of the square:"));
+            let perimeter = side * 4;
+            alert("Perimeter of the square: " + perimeter);
+        }
+        //4
+        {
+            let radius = Number(prompt("Enter the radius of the circle:"));
+            let area = 3.14 * radius * radius;
+            alert("Area of the circle: " + area);
+        }
+        //5
+        {
+            let distance = Number(prompt("Enter the distance between cities (km):"));
+            let hours = Number(prompt("In how many hours do you want to travel?"));
+            let speed = distance / hours;
+            alert("Required speed: " + speed + " km/h");
+        }
+        //6
+        {
+            const EURO_RATE = 0.85;
+            let dollars = Number(prompt("Enter the amount of dollars:"));
+            let euro = dollars * EURO_RATE;
+            alert("Euro: " + euro);
+        }
+        //7
+        {
+            let flashGB = Number(prompt("Enter the capacity of the flash drive (GB):"));
+            let flashMB = flashGB * 1024;
+            let files = parseInt(flashMB / 820);
+            alert("Files that will fit: " + files);
+        }
+
+        //8
+        {
+            let money = Number(prompt("Enter the amount of money in the wallet:"));
+            let price = Number(prompt("Enter the price of the chocolate:"));
+            let chocolates = parseInt(money / price);
+            let change = money - chocolates * price;
+            alert(
+                "Chocolates: " + chocolates +
+                "\nChange: " + change
+            );
+        }
+        //9
+        {
+            let number = Number(prompt("Enter a three-digit number:"));
+            let first = parseInt(number / 100);
+            let second = parseInt((number % 100) / 10);
+            let third = number % 10;
+            let palindrome = "" + third + second + first;
+            alert("Reversed number: " + palindrome);
+        }
+        //10
+        {
+            let number = Number(prompt("Enter an integer:"));
+            alert(number % 2 == 0 && "Even" || "Odd");
+        }
+    </script>
+</body>
+
+</html>
