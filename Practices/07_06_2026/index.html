@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        let rect =
+        {
+            leftTopX: 0,
+            leftTopY: 4,
+            rightBottomX: 6,
+            rightBottomY: 0
+        };
+
+        //1.1
+        function showRect(r) {
+            console.log(
+                "Left top point:\t\t(" + r.leftTopX + "; " + r.leftTopY + ")\n" +
+                "Right bottom point:\t(" + r.rightBottomX + "; " + r.rightBottomY + ")\n" +
+                "Left bottom point:\t(" + r.leftTopX + "; " + r.rightBottomY + ")\n" +
+                "Right top point:\t(" + r.rightBottomX + "; " + r.leftTopY + ")\n"
+            );
+        }
+
+        //1.2
+        function getWidth(r) {
+            return Math.abs(r.rightBottomX - r.leftTopX);
+        }
+
+        //1.3
+        function getHeight(r) {
+            return Math.abs(r.rightBottomY - r.leftTopY);
+        }
+
+        //1.4
+        function getArea(r) {
+            return getWidth(r) * getHeight(r);
+        }
+
+        //1.5
+        function getPerimeter(r) {
+            return (getWidth(r) + getHeight(r)) * 2;
+        }
+
+        //1.6
+        function changeWidth(r, value) {
+            r.rightBottomX += value;
+        }
+
+        //1.7
+        function changeHeight(r, value) {
+            r.rightBottomY += value;
+        }
+
+        //1.8
+        function changeSize(r, widthValue, heightValue) {
+            r.rightBottomX += widthValue;
+            r.rightBottomY += heightValue;
+        }
+
+        //1.9
+        function moveX(r, value) {
+            r.leftTopX += value;
+            r.rightBottomX += value;
+        }
+
+        //1.10
+        function moveY(r, value) {
+            r.leftTopY += value;
+            r.rightBottomY += value;
+        }
+
+        //1.11
+        function moveXY(r, x, y) {
+            r.leftTopX += x;
+            r.rightBottomX += x;
+
+            r.leftTopY += y;
+            r.rightBottomY += y;
+        }
+
+        //1.12
+        function isPointInside(r, x, y) {
+            return x >= r.leftTopX &&
+                x <= r.rightBottomX &&
+                y >= r.leftTopY &&
+                y <= r.rightBottomY;
+        }
+
+        //2
+        showRect(rect);
+        console.log("Width: " + getWidth(rect));
+        console.log("Height: " + getHeight(rect));
+        console.log("Area: " + getArea(rect));
+        console.log("Perimeter: " + getPerimeter(rect));
+        changeWidth(rect, 2);
+        changeHeight(rect, 1);
+        moveXY(rect, 3, 2);
+        showRect(rect);
+        console.log(isPointInside(rect, 5, 3));
+    </script>
+</body>
+
+</html>
