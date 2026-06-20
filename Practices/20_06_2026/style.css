@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+    background: rgb(0, 31, 64);
+}
+section {
+    margin: 20px;
+    border: 4px solid #888888;
+    padding: 7px 10px;  
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: left;
+    background: #001d46;
+    color: #ffffff;
+}
+section p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*1*/
+.counter-box {
+    display: inline-flex;
+    border: 2px solid #888888;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+#numberInput {
+    width: 50px;
+    font-size: 32px;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #888888;
+}
+.buttons-container button {
+    height: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 10px;
+}
+#increaseBtn {
+    border-bottom: 2px solid #888888;
+}
+/*2*/
+#blocksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.color-block {
+    width: 60px;
+    height: 40px;
+    cursor: pointer; 
+}
+#addBtn {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    border: 1px solid #ababab;
+    cursor: pointer;
+}
+/*3*/
+.color {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 5px;
+}
+.color:nth-child(1) {
+    background: red;
+}
+.color:nth-child(2) {
+    background: blue;
+}
+.color:nth-child(3) {
+    background: green;
+}
+.color:nth-child(4) {
+    background: orange;
+}
+/*4*/
+.comment {
+    border: 3px solid rgb(255, 255, 0);
+    margin: 5px;
+    padding: 5px;
+}
+/*5*/
+.hint {
+    cursor: pointer;
+    padding: 5px;
+}

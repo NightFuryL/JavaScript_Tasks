@@ -48,8 +48,10 @@
         }
         function addElement() {
             const newDiv = document.createElement('div');
-            newDiv.textContent = counter++;
+            counter++;
+            newDiv.textContent = String(counter);
             newDiv.classList.add('new-element');
+            newDiv.dataset.color = 'red';
             const container = document.getElementById('container');
             container.append(newDiv);
         }

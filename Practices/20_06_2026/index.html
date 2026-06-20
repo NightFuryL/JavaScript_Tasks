@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--1-->
+    <section>
+        <p>1</p>
+        <hr>
+        <div class="counter-box">
+            <input type="text" id="numberInput" value="10" readonly>
+            <div class="buttons-container">
+                <button id="increaseBtn" onclick="plus()">▲</button>
+                <button id="decreaseBtn" onclick="minus()">▼</button>
+            </div>
+        </div>
+    </section>
+    <!--2-->
+    <section>
+        <p>2</p>
+        <hr>
+        <button id="addBtn" onclick="addBlock()">Add block</button>
+        <div id="blocksContainer"></div>
+        <script src="script.js"></script>
+    </section>
+    <!--3-->
+    <section>
+        <p>3</p>
+        <hr>
+        <p id="text">
+            Lorem ipsum dolor sit amet.
+        </p>
+        <div class="palette">
+            <div class="color" data-color="red"></div>
+            <div class="color" data-color="blue"></div>
+            <div class="color" data-color="green"></div>
+            <div class="color" data-color="orange"></div>
+        </div>
+    </section>
+    <!--4-->
+    <section>
+        <p>4</p>
+        <hr>
+        <h2>
+            Article
+        </h2>
+        <p>
+            Some article text here.
+        </p>
+        <h3>
+            Comments
+        </h3>
+        <div id="comments"></div>
+        <input id="name" placeholder="Name">
+        <input id="comment" placeholder="Comment">
+        <button id="addComment">
+            Add comment
+        </button>
+    </section>
+    <!--5-->
+    <section>
+        <p>5</p>
+        <hr>
+        <input id="country" placeholder="Country">
+        <div id="hints"></div>
+    </section>
+    <script src="./JSFiles/first.js"></script>
+    <script src="./JSFiles/second.js"></script>
+    <script src="./JSFiles/third.js"></script>
+    <script src="./JSFiles/fourth.js"></script>
+    <script src="./JSFiles/fifth.js"></script>
+</body>
+
+</html>
