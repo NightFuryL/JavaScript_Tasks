@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Resources/General_styles/style1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--1-->
+    <section>
+        <p class="task-number">Ex. num 1</p>
+        <hr>
+        <div class="task">
+            <table id="companyTable">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Company</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bill</td>
+                        <td>Gates</td>
+                        <td>Microsoft</td>
+                    </tr>
+                    <tr>
+                        <td>Timothy</td>
+                        <td>Cook</td>
+                        <td>Apple</td>
+                    </tr>
+                    <tr>
+                        <td>Larry</td>
+                        <td>Page</td>
+                        <td>Google</td>
+                    </tr>
+                    <tr>
+                        <td>Mark</td>
+                        <td>Zuckerberg</td>
+                        <td>Facebook</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!--2-->
+    <section>
+        <p class="task-number">Ex. num 2</p>
+        <hr>
+        <div class="task">
+            <div id="content">
+                <h3>What is Lorem Ipsum?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio illum reprehenderit in iste possimus
+                    ex. Quaerat mollitia deleniti explicabo itaque minus, dignissimos architecto eius! Ut earum enim rem
+                    architecto ipsa dolores commodi illo magni ex.</p>
+            </div>
+        </div>
+    </section>
+    <!--3-->
+    <section>
+        <p class="task-number">Ex. num 3</p>
+        <hr>
+        <div class="task">
+            <button id="likeBtn" onclick="addLike()">
+                <span class="icon">👍🏿</span> Like <span id="likeCount">99</span>
+            </button>
+        </div>
+    </section>
+    <!--4-->
+    <section>
+        <p class="task-number">Ex. num 4</p>
+        <hr>
+        <div class="task">
+            <div class="calculator">
+                <input type="text" id="display" readonly value="">
+
+                <div class="buttons">
+                    <button onclick="press('7')">7</button>
+                    <button onclick="press('8')">8</button>
+                    <button onclick="press('9')">9</button>
+                    <button onclick="press('+')">+</button>
+
+                    <button onclick="press('4')">4</button>
+                    <button onclick="press('5')">5</button>
+                    <button onclick="press('6')">6</button>
+                    <button onclick="press('-')">-</button>
+
+                    <button onclick="press('1')">1</button>
+                    <button onclick="press('2')">2</button>
+                    <button onclick="press('3')">3</button>
+                    <button onclick="press('*')">*</button>
+
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="press('0')">0</button>
+                    <button onclick="calculate()">=</button>
+                    <button onclick="press('/')">/</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--5-->
+    <section>
+        <p class="task-number">Ex. num 5</p>
+        <hr>
+        <div class="task">
+            <nav class="navbar">
+                <div class="nav-item">Home</div>
+                <div class="nav-item dropdown" onclick="toggleMenu()">
+                    Categories
+                    <div id="submenu" class="submenu">
+                        <div class="submenu-item">Dresses</div>
+                        <div class="submenu-item">Shirts</div>
+                        <div class="submenu-item">Jeans</div>
+                        <div class="submenu-item">Shoes</div>
+                    </div>
+                </div>
+                <div class="nav-item">About</div>
+                <div class="nav-item">Contact</div>
+            </nav>
+        </div>
+    </section>
+    <!--6-->
+    <section>
+        <p class="task-number">Ex. num 6</p>
+        <hr>
+        <div class="content-article">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quae libero incidunt vitae reprehenderit
+                asperiores impedit, illum dolorum deserunt consequuntur sit, aliquam voluptates minima sapiente tempora
+                officia, omnis cumque aut!</p>
+            <hr>
+            <h3>Where does it come from?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse incidunt quos, dignissimos inventore
+                deserunt magni accusamus nihil molestias officia voluptate perspiciatis laborum autem consequuntur
+                commodi?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione sunt mollitia repudiandae repellendus
+                cumque magni iure, eos non pariatur fugiat praesentium. Officiis ullam ducimus doloribus!</p>
+        </div>
+        <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+        <div class="task"></div>
+    </section>
+    <script src="./JSFiles/first.js"></script>
+    <script src="./JSFiles/second.js"></script>
+    <script src="./JSFiles/third.js"></script>
+    <script src="./JSFiles/fourth.js"></script>
+    <script src="./JSFiles/fifth.js"></script>
+    <script src="./JSFiles/sixth.js"></script>
+</body>
+
+</html>

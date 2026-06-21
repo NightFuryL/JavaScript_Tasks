@@ -1,20 +1,31 @@
 body {
     font-family: sans-serif;
-    background: rgb(0, 31, 64);
+    background: rgb(0, 22, 46);
 }
+
 section {
     margin: 20px;
-    border: 4px solid #888888;
-    padding: 7px 10px;  
+    border: 4px solid #ffffff;
+    padding: 10px 10px;
     background: #f0f0f0;
     border-radius: 10px;
     text-align: left;
-    background: #001d46;
+    background: #001227;
     color: #ffffff;
+    box-shadow: 7px 7px black;
 }
-section .task-number{
+
+section .task-number {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+}
+
+section .task {
+    padding: 15px;
+}
+
+hr {
+    margin: 10px;
 }
