@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quae quos architecto ullam distinctio eum nihil
+        fugiat! Exercitationem iure cum pariatur vero optio consectetur vel, corrupti molestiae doloribus quod beatae.
+    </p>
+    <ul id="test-list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <form action="" id="email-form">
+        <h3>Залиште вашу пошту ми зв'яжемось вами: </h3>
+        <label for="email">E-mail: </label>
+        <input type="text" id="email">
+        <button type="submit">Надіслати!</button>
+    </form>
+
+
+    <button id="change-colors">Change colors</button>
+    <!--<button onclick="switchColors()">Press me!</button> -->
+    <!--<button class="change-colors">Change colors!</button> -->
+    <script>
+        /*const btnChangeColors = document.querySelector('change-colors');
+        btnChangeColors.addEventListener("click", switchColors);*/
+        document.addEventListener('DOMContentLoaded', () => {
+            const frmEmail = document.getElementById('email-form');
+            frmEmail.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(frmEmail);
+                console.log(formData);
+                //send data in background mode.
+            })
+
+            const ul = document.querySelector("#test-list");
+            ul.addEventListener("click", (e) => {
+                if (e.target !== ul) {
+                    e.target.remove();
+                }
+
+            });
+
+            const btnChangeColors = document.querySelector('#change-colors');
+            btnChangeColors.addEventListener("click", switchColors);
+            //document.body.addEventListener();
+        })
+        function switchColors(e) {
+            console.log(`[LOG] Click event. Target: ${e.Target}`)
+            console.log("on click");
+            const body = document.body;
+            body.style.backgroundColor = body.style.backgroundColor === 'black' ? 'white' : 'black';
+            body.style.color = body.style.color === 'white' ? 'black' : 'white';
+        }
+    </script>
+</body>
+
+</html>
