@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Resources/General_styles/style1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--1-->
+    <section class="first-section">
+        <p class="task-number">Ex. num 1</p>
+        <hr>
+        <div class="task">
+            <div class="form-group">
+                <label for="nameInput">Enter your name (name can't contain digits):</label>
+                <input type="text" id="nameInput">
+            </div>
+        </div>
+    </section>
+    <!--2-->
+    <section class="second-section">
+        <p class="task-number">Ex. num 2</p>
+        <hr>
+        <div class="task">
+            <button id="openBtn" onclick="openModal()">Open modal</button>
+            <div id="modalWindow" class="modal">
+                <h2>Hello from Modal Window!</h2>
+                <button id="closeBtn" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </section>
+    <!--3-->
+    <section class="third-section">
+        <p class="task-number">Ex. num 3</p>
+        <hr>
+        <div class="task">
+            <a href="third-task.html" target="_blank" rel="noopener noreferrer">
+                <button
+                    style="background-color: blue; color: white; border: 4px solid #003366; border-radius: 5px; box-shadow: 0 4px 8px black">
+                    Відкрити третє завдання</button>
+            </a>
+        </div>
+    </section>
+    <!--4-->
+    <section class="fourth-section">
+        <p class="task-number">Ex. num 4</p>
+        <hr>
+        <div class="task">
+            <div class="traffic-light">
+                <div id="red" class="light"></div>
+                <div id="yellow" class="light active-yellow"></div>
+                <div id="green" class="light"></div>
+            </div>
+            <button id="nextBtn" onclick="nextColor()">NEXT</button>
+        </div>
+    </section>
+    <!--5-->
+    <section class="fifth-section">
+        <p class="task-number">Ex. num 5</p>
+        <hr>
+        <div class="task">
+            <ol onclick="selectBook(event)">
+                <li>"JavaScript for Kids: A Playful Introduction to Programming" by Nick Morgan</li>
+                <li>"Eloquent JavaScript: A Modern Introduction to Programming" by Marijn Haverbeke</li>
+                <li>"JavaScript: The Good Parts" by Douglas Crockford</li>
+                <li>"Programming JavaScript Applications: Robust Web Architecture with Node, HTML5, and Moderns JS
+                    Libraries" by Eric Elliott</li>
+                <li>"Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript" by David Herman</li>
+                <li>"JavaScript: The Definitive Guide" by David Flanagan</li>
+                <li>"You Don't Know JS" by Kyle Simpson</li>
+            </ol>
+        </div>
+    </section>
+    <!--6-->
+    <section class="sixth-section">
+        <p class="task-number">Ex. num 6</p>
+        <hr>
+        <div class="task">
+            <div class="container">
+                <div class="btn-wrapper">
+                    <button onmouseover="showTip(this, 'Tool tip 1')" onmouseout="hideTip(this)">Button 1</button>
+                </div>
+                <div class="btn-wrapper">
+                    <button onmouseover="showTip(this, 'Tool tip 2')" onmouseout="hideTip(this)">Button 2</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./JSFiles/first.js"></script>
+    <script src="./JSFiles/second.js"></script>
+    <script src="./JSFiles/fourth.js"></script>
+    <script src="./JSFiles/fifth.js"></script>
+    <script src="./JSFiles/sixth.js"></script>
+</body>
+</html>
