@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Resources/General_styles/style1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--1-->
+    <section class="task-section">
+        <p class="task-number">Ex. num 1</p>
+        <hr>
+        <div class="task">
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <label>Your login:</label>
+                <input type="text" id="loginInput" required>
+                <label>Your password:</label>
+                <input type="password" id="passwordInput" required>
+                <div class="remember-box">
+                    <span>Remember me</span>
+                    <input type="checkbox" id="rememberCheckbox">
+                </div>
+                <button type="submit" id="signInBtn">Sign In</button>
+            </form>
+            <a href="#" class="forgot-link">Forgot password?</a>
+            <p id="welcomeMessage"></p>
+        </div>
+    </section>
+    <!-- 2-->
+    <section class="task-section">
+        <p class="task-number">Ex. num 2</p>
+        <hr>
+        <div class="task">
+            <form id="registerForm" onsubmit="handleRegister(event)">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Your email:</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Your login:</label>
+                        <input type="text" id="regLogin" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Your password:</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Repeat password:</label>
+                        <input type="password" id="regRepeatPassword" required>
+                    </div>
+                </div>
+                <button type="submit" id="signUpBtn">Sign Up</button>
+            </form>
+            <p id="registerMessage"></p>
+        </div>
+    </section>
+    <!--3-->
+    <section class="task-section">
+        <p class="task-number">Ex. num 3</p>
+        <hr>
+        <div class="task">
+            <form id="userForm">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Firstname:</label>
+                        <input type="text" name="firstname" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Lastname:</label>
+                        <input type="text" name="lastname" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Birthday:</label>
+                        <input type="date" name="birthday" required>
+                    </div>
+                    <div class="input-group gender-group">
+                        <label>Gender:</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Male" checked> Male</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Country:</label>
+                        <select name="country">
+                            <option value="Canada">Canada</option>
+                            <option value="Ukraine">Ukraine</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>City:</label>
+                        <select name="city">
+                            <option value="Toronto">Toronto</option>
+                            <option value="Kyiv">Kyiv</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <label>Skills:</label>
+                    <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                    <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                    <label><input type="checkbox" name="skills" value="JS"> JS</label>
+                    <label><input type="checkbox" name="skills" value="PHP"> PHP</label>
+                    <label><input type="checkbox" name="skills" value="C++"> C++</label>
+                    <label><input type="checkbox" name="skills" value="JAVA"> JAVA</label>
+                    <label><input type="checkbox" name="skills" value="C#"> C#</label>
+                </div>
+                <button type="submit" id="saveBtn">Save</button>
+            </form>
+            <div id="resultTableContainer" style="display: none;">
+                <h4>Result:</h4>
+                <table id="resultTable">
+                    <tr><td>Firstname</td><td id="resFirstname"></td></tr>
+                    <tr><td>Lastname</td><td id="resLastname"></td></tr>
+                    <tr><td>Birthday</td><td id="resBirthday"></td></tr>
+                    <tr><td>Gender</td><td id="resGender"></td></tr>
+                    <tr><td>Country</td><td id="resCountry"></td></tr>
+                    <tr><td>City</td><td id="resCity"></td></tr>
+                    <tr><td>Skills</td><td id="resSkills"></td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--4-->
+    <section class="task-section">
+        <p class="task-number">Ex. num 4</p>
+        <hr>
+        <div class="task">
+            <form id="colorForm">
+                <div class="rgb-inputs">
+                    <label>R <input type="number" name="r" min="0" max="255" required></label>
+                    <label>G <input type="number" name="g" min="0" max="255" required></label>
+                    <label>B <input type="number" name="b" min="0" max="255" required></label>
+                </div>
+                <button type="submit" id="addColorBtn">Add color</button>
+            </form>
+            <div id="paletteContainer">
+                <div class="palette-item">
+                    <div class="color-box" style="background-color: rgb(165, 42, 42);"></div>
+                    <span class="color-text">RGB (165, 42, 42)</span>
+                </div>
+                <div class="palette-item">
+                    <div class="color-box" style="background-color: rgb(138, 43, 226);"></div>
+                    <span class="color-text">RGB (138, 43, 226)</span>
+                </div>
+                <div class="palette-item">
+                    <div class="color-box" style="background-color: rgb(0, 139, 139);"></div>
+                    <span class="color-text">RGB (0, 139, 139)</span>
+                </div>
+                <div class="palette-item">
+                    <div class="color-box" style="background-color: rgb(100, 149, 237);"></div>
+                    <span class="color-text">RGB (100, 149, 237)</span>
+                </div>
+                <div class="palette-item">
+                    <div class="color-box" style="background-color: rgb(210, 105, 30);"></div>
+                    <span class="color-text">RGB (210, 105, 30)</span>
+                </div>
+                <div class="palette-item">
+                    <div class="color-box" style="background-color: rgb(0, 206, 209);"></div>
+                    <span class="color-text">RGB (0, 206, 209)</span>
+                </div>
+                <div class="palette-item">
+                    <div class="color-box" style="background-color: rgb(189, 183, 107);"></div>
+                    <span class="color-text">RGB (189, 183, 107)</span>
+                </div>
+                <div class="palette-item">
+                    <div class="color-box" style="background-color: rgb(255, 105, 180);"></div>
+                    <span class="color-text">RGB (255, 105, 180)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--5-->
+    <section class="task-section">
+        <p class="task-number">Ex. num 5</p>
+        <hr>
+        <div class="task">
+            <div class="test-container">
+                <h4>All questions:</h4>
+                <div id="questionsList"></div>
+                <hr>
+                <h4>Add new question:</h4>
+                <form id="quizForm">
+                    <div class="form-row">
+                        <label>Question:</label>
+                        <input type="text" name="question" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Correct answer:</label>
+                        <input type="text" name="correct" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Wrong answer:</label>
+                        <input type="text" name="wrong" required>
+                    </div>
+                    <button type="submit" id="addQuestionBtn">Add</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="./JSFiles/first.js"></script>
+    <script src="./JSFiles/second.js"></script>
+    <script src="./JSFiles/third.js"></script>
+    <script src="./JSFiles/fourth.js"></script>
+    <script src="./JSFiles/fifth.js"></script>
+</body>
+
+</html>
