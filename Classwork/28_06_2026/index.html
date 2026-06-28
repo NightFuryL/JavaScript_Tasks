@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: solid black 3px;
+            border-radius: 5px;
+            margin: 0.6em;
+            padding: 0.7em;
+            text-shadow: 2px 2px 30px rgb(58, 116, 148);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <label for="email">E-mail: </label>
+        <input type="text" name="email" id="email">
+        <p id="feedback" hidden></p>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            localStorage.setItem("username", "Олексій");
+            localStorage.setItem("theme", "dark");
+            console.log(localStorage.getItem("theme"));
+
+            localStorage.setItem("theme", "light");
+            localStorage.removeItem("username");
+            localStorage.clear();
+
+            const emailInput = document.querySelector('#email');
+            const feedback = document.querySelector('#feedback');
+
+            emailInput.addEventListener("input", (e) => {
+                const value = e.target.value;
+
+                feedback.hidden = false;
+
+                if (value === '') {
+                    feedback.hidden = true;
+                    feedback.textContent = '';
+                    return;
+
+                }
+                if (/^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/.test(value)) {
+                    feedback.textContent = "E-mail is correct.";
+                    feedback.style.color = 'green';
+                } else {
+                    feedback.textContent = "E-mail is not correct";
+                    feedback.style.color = 'red';
+                }
+            });
+        })
+
+    </script>
+</body>
+
+</html>
