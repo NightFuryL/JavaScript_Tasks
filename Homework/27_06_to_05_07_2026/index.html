@@ -3,60 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Palette</title>
+    <title>Forms Homework</title>
     <link rel="stylesheet" href="../../Resources/General_styles/style1.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <section class="task-section">
-        <p class="task-number">Ex. num 1.1 - Create New Color</p>
+        <p class="task-number">Ex. num 1 - Forum</p>
         <hr>
         <div class="task">
-            <div class="form-container">
-                <h4>Create new color</h4>
-                <form id="colorForm">
-                    <div class="field-group">
-                        <div class="label-row">
-                            <label>Color Name:</label>
-                            <span id="nameError" class="error-msg"></span>
+            <div class="form-container wide-block">
+                <div class="messages-list" id="messagesList">
+                    <div class="message-item">
+                        <div class="message-header">
+                            <span>Name</span>
+                            <span>10:05:00 22.03.2018</span>
                         </div>
-                        <input type="text" id="colorName">
+                        <div class="message-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
                     </div>
-
+                </div>
+                <form id="forumForm" class="custom-form">
+                    <h4>Add new message:</h4>
                     <div class="field-group">
-                        <div class="label-row">
-                            <label>Type:</label>
-                        </div>
-                        <select id="colorType">
-                            <option value="RGB">RGB</option>
-                            <option value="RGBA">RGBA</option>
-                            <option value="HEX">HEX</option>
-                        </select>
+                        <label>Your name:</label>
+                        <input type="text" id="forumName">
                     </div>
-
                     <div class="field-group">
-                        <div class="label-row">
-                            <label>Code:</label>
-                            <span id="codeError" class="error-msg"></span>
-                        </div>
-                        <input type="text" id="colorCode" placeholder="255, 0, 0">
+                        <label>Your message:</label>
+                        <textarea id="forumMessage"></textarea>
                     </div>
-
-                    <button type="submit" class="form-btn">Save</button>
+                    <button type="submit" class="form-btn">Send</button>
                 </form>
             </div>
         </div>
     </section>
 
     <section class="task-section">
-        <p class="task-number">Ex. num 1.2 - All Colors</p>
+        <p class="task-number">Ex. num 2 - Quiz</p>
         <hr>
         <div class="task">
-            <div class="palette-grid" id="paletteGrid"></div>
+            <div class="form-container">
+                <form id="quizForm" class="custom-form">
+                    <h4>Test</h4>
+                    <div class="quiz-question">
+                        <p>1. What is the capital of Ukraine?</p>
+                        <label><input type="radio" name="q1" value="correct"> Kyiv</label><br>
+                        <label><input type="radio" name="q1" value="wrong"> Lviv</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>2. Which language is used for web style?</p>
+                        <label><input type="radio" name="q2" value="wrong"> C++</label><br>
+                        <label><input type="radio" name="q2" value="correct"> CSS</label>
+                    </div>
+                    <button type="submit" class="form-btn">Finish</button>
+                </form>
+                <div id="quizResult" class="result-box"></div>
+            </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <section class="task-section">
+        <p class="task-number">Ex. num 3 - Text Styles</p>
+        <hr>
+        <div class="task">
+            <div class="form-container wide-block">
+                <form id="styleForm" class="custom-form">
+                    <div class="field-group">
+                        <label><input type="checkbox" id="textBold"> Bold</label>
+                        <label><input type="checkbox" id="textUnderline"> Underline</label>
+                        <label><input type="checkbox" id="textItalic"> Italic</label>
+                    </div>
+                    <div class="field-group">
+                        <label><input type="radio" name="align" value="left" checked> Left</label>
+                        <label><input type="radio" name="align" value="right"> Right</label>
+                        <label><input type="radio" name="align" value="justify"> Justify</label>
+                    </div>
+                    <div class="field-group">
+                        <textarea id="styleText">Sample text for testing styles layout options.</textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="task-section">
+        <p class="task-number">Ex. num 4 - Book Store</p>
+        <hr>
+        <div class="task">
+            <div class="form-container wide-block">
+                <form id="bookForm" class="custom-form">
+                    <div class="books-grid">
+                        <div class="book-card">
+                            <p class="book-title">HTML & CSS</p>
+                            <p>Price: $50</p>
+                            <label><input type="checkbox" class="book-select" data-price="50" data-name="HTML & CSS"> Select</label>
+                        </div>
+                        <div class="book-card">
+                            <p class="book-title">JavaScript & JQuery</p>
+                            <p>Price: $60</p>
+                            <label><input type="checkbox" class="book-select" data-price="60" data-name="JavaScript & JQuery"> Select</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="field-group">
+                        <label>Delivery date:</label>
+                        <input type="text" id="deliveryDate" placeholder="DD.MM.YYYY">
+                    </div>
+                    <div class="field-group">
+                        <label>Comment:</label>
+                        <textarea id="deliveryComment"></textarea>
+                    </div>
+                    <button type="submit" class="form-btn">Buy</button>
+                </form>
+                <div id="bookResult" class="result-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="task-section">
+        <p class="task-number">Ex. num 5 - Group Attendance</p>
+        <hr>
+        <div class="task">
+            <div class="form-container wide-block">
+                <form id="attendanceForm" class="custom-form">
+                    <div class="selectors-row">
+                        <select id="groupSelect">
+                            <option value="Group 1">Group 1</option>
+                            <option value="Group 2">Group 2</option>
+                        </select>
+                        <select id="lessonSelect">
+                            <option value="1">Lesson 1</option>
+                            <option value="2">Lesson 2</option>
+                            <option value="3">Lesson 3</option>
+                        </select>
+                        <button type="button" id="selectGroupBtn" class="form-btn inline-btn">Select</button>
+                    </div>
+                    <div id="attendancePanel" class="hidden-panel">
+                        <div class="field-group">
+                            <label>Topic:</label>
+                            <input type="text" id="lessonTopic">
+                        </div>
+                        <div class="students-list">
+                            <div class="student-row"><label><input type="checkbox" class="student-check" value="Student 1"> Student 1</label></div>
+                            <div class="student-row"><label><input type="checkbox" class="student-check" value="Student 2"> Student 2</label></div>
+                            <div class="student-row"><label><input type="checkbox" class="student-check" value="Student 3"> Student 3</label></div>
+                        </div>
+                        <button type="submit" class="form-btn">Save</button>
+                    </div>
+                </form>
+                <div id="attendanceResult" class="result-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="task-section">
+        <p class="task-number">Ex. num 6 - Train Tickets</p>
+        <hr>
+        <div class="task">
+            <div class="form-container wide-block">
+                <form id="trainForm" class="custom-form">
+                    <div class="selectors-row">
+                        <select id="directionSelect">
+                            <option value="Kyiv - Odesa">Kyiv - Odesa</option>
+                            <option value="Odesa - Lviv">Odesa - Lviv</option>
+                        </select>
+                        <input type="text" id="trainDate" placeholder="DD.MM.YYYY">
+                        <button type="button" id="searchTrainBtn" class="form-btn inline-btn">Select</button>
+                    </div>
+                    <div id="seatsPanel" class="hidden-panel">
+                        <p>Choose seats:</p>
+                        <div class="seats-grid">
+                            <button type="button" class="seat-btn" data-seat="1">1</button>
+                            <button type="button" class="seat-btn" data-seat="2">2</button>
+                            <button type="button" class="seat-btn" data-seat="3">3</button>
+                            <button type="button" class="seat-btn" data-seat="4">4</button>
+                        </div>
+                        <button type="submit" class="form-btn">Book</button>
+                    </div>
+                </form>
+                <div id="trainResult" class="result-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="first.js"></script>
+    <script src="second.js"></script>
+    <script src="third.js"></script>
+    <script src="fourth.js"></script>
+    <script src="fifth.js"></script>
+    <script src="sixth.js"></script>
 </body>
 </html>
