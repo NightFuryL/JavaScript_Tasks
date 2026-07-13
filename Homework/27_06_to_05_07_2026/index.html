@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette</title>
+    <link rel="stylesheet" href="../../Resources/General_styles/style1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="task-section">
+        <p class="task-number">Ex. num 1.1 - Create New Color</p>
+        <hr>
+        <div class="task">
+            <div class="form-container">
+                <h4>Create new color</h4>
+                <form id="colorForm">
+                    <div class="field-group">
+                        <div class="label-row">
+                            <label>Color Name:</label>
+                            <span id="nameError" class="error-msg"></span>
+                        </div>
+                        <input type="text" id="colorName">
+                    </div>
+
+                    <div class="field-group">
+                        <div class="label-row">
+                            <label>Type:</label>
+                        </div>
+                        <select id="colorType">
+                            <option value="RGB">RGB</option>
+                            <option value="RGBA">RGBA</option>
+                            <option value="HEX">HEX</option>
+                        </select>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="label-row">
+                            <label>Code:</label>
+                            <span id="codeError" class="error-msg"></span>
+                        </div>
+                        <input type="text" id="colorCode" placeholder="255, 0, 0">
+                    </div>
+
+                    <button type="submit" class="form-btn">Save</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="task-section">
+        <p class="task-number">Ex. num 1.2 - All Colors</p>
+        <hr>
+        <div class="task">
+            <div class="palette-grid" id="paletteGrid"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
