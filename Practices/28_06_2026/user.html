@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="user-section">
+        <p class="task-number">Ex. num 1.2 - User Info</p>
+        <hr>
+        <div class="task">
+            <div class="form-container">
+                <div class="user-header">
+                    <span>Hello, <span id="userGreeting"></span>!</span>
+                    <a href="#" id="exitLink">exit</a>
+                </div>
+                <h4>User info</h4>
+                <form id="infoValidationForm">
+                    <div class="form-grid">
+                        <div class="field-group">
+                            <div class="label-row">
+                                <label>First Name:</label>
+                                <span id="firstNameError" class="error-msg"></span>
+                            </div>
+                            <input type="text" id="firstName">
+                        </div>
+                        <div class="field-group">
+                            <div class="label-row">
+                                <label>Last Name:</label>
+                                <span id="lastNameError" class="error-msg"></span>
+                            </div>
+                            <input type="text" id="lastName">
+                        </div>
+                        <div class="field-group">
+                            <div class="label-row">
+                                <label>Year of birth:</label>
+                                <span id="yearError" class="error-msg"></span>
+                            </div>
+                            <input type="text" id="yearOfBirth">
+                        </div>
+                        <div class="field-group">
+                            <div class="label-row">
+                                <label>Gender:</label>
+                                <span id="genderError" class="error-msg"></span>
+                            </div>
+                            <select id="gender">
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <div class="label-row">
+                                <label>Phone number:</label>
+                                <span id="phoneError" class="error-msg"></span>
+                            </div>
+                            <input type="text" id="phoneNumber">
+                        </div>
+                        <div class="field-group">
+                            <div class="label-row">
+                                <label>Skype:</label>
+                                <span id="skypeError" class="error-msg"></span>
+                            </div>
+                            <input type="text" id="skype">
+                        </div>
+                    </div>
+                    <button type="submit" class="form-btn">Save</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="user.js"></script>
+</body>
+</html>

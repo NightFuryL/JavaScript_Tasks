@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="registration-section">
+        <p class="task-number">Ex. num 1.1 - Registration</p>
+        <hr>
+        <div class="task">
+            <div class="form-container">
+                <h4>Registration</h4>
+                <form id="regValidationForm">
+                    <div class="field-group">
+                        <div class="label-row">
+                            <label>Email:</label>
+                            <span id="emailError" class="error-msg"></span>
+                        </div>
+                        <input type="text" id="emailInput">
+                    </div>
+                    <div class="field-group">
+                        <div class="label-row">
+                            <label>Password:</label>
+                            <span id="passwordError" class="error-msg"></span>
+                        </div>
+                        <input type="password" id="passwordInput">
+                    </div>
+                    <div class="field-group">
+                        <div class="label-row">
+                            <label>Repeat:</label>
+                            <span id="repeatError" class="error-msg"></span>
+                        </div>
+                        <input type="password" id="repeatInput">
+                    </div>
+                    <button type="submit" class="form-btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="register.js"></script>
+</body>
+
+</html>

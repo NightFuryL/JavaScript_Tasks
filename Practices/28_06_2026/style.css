@@ -1,0 +1,118 @@
+:root {
+    --color_btn: rgb(14, 43, 72);
+    --color_back_color: rgb(10, 34, 64);
+    --color_text: white;
+    --color_box-shadow: rgba(0, 8, 21);
+}
+
+body {
+    font-family: sans-serif;
+    background: rgb(0, 14, 30);
+    padding: 20px 20px;
+}
+
+section, .section-class {
+    margin: 15px 0px;
+    border: 4px solid #ffffff3d;
+    padding: 10px 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: left;
+    background: #001227;
+    color: #ffffff;
+    box-shadow: 7px 7px var(--color_box-shadow);
+}
+
+section .task-number {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section .task {
+    padding: 15px;
+}
+
+hr {
+    margin: 10px;
+}
+
+/* --- REGISTRATION STYLES --- */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-container h4 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.field-group {
+    margin-bottom: 15px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.error-msg {
+    color: #ff4d4d;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.field-group input, .field-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #0e2b48;
+    color: white;
+}
+
+.form-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color_btn);
+    color: white;
+    border: 1px solid #ffffff3d;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-btn:hover {
+    background-color: #1a4473;
+}
+
+/* --- USER INFO STYLES --- */
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.user-header a {
+    color: #ff4d4d;
+    text-shadow: 1px 1px 2px black;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
