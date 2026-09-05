@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        const button = document.getElementById('myButton');
+        button.addEventListener('click', () => {
+            const myPromise = new Promise((resolve, reject) => {
+                // Імітація асинхронної задачі
+                setTimeout(() => {
+                    const isSuccess = false; // Змінити на true для успішного виконання
+
+                    if (isSuccess) { // Переводить у стан Fulfilled
+                        resolve("Операція успішна!");
+                    } else { // Переводить у стан Rejected
+                        reject("Сталася помилка.");
+                    }
+                }, 1000);
+
+            });
+
+            myPromise
+                .then((message) => {
+                    console.log(message);
+                })
+
+                .catch((error) => {
+                    console.error(error);
+                });
+
+            new Promise((resolve) => {
+                resolve(2);
+            }).then((result) => {
+                setTimeout(() => {
+                    console.log(result);
+                }, 2000);
+                return result * 2;
+            }).then((result) => {
+                setTimeout(() => {
+                    console.log(result);
+                }, 2000);
+                return result * 2;
+            }).then((result) => {
+                setTimeout(() => {
+                    console.log(result);
+                }, 2000);
+            });
+
+            new Promise((resolve, reject) => {
+                reject("Сталася помилка у першому промісі");
+                resolve('Перший проміс виконано');
+            }).then((result) => {
+                console.log(result);
+                // throw new Error ( 'Сталася помилка у другому промісi');
+            }).then((result) => {
+                console.log('Цей код не буде виконано через помилку у попередньому промісi');
+            }).catch((error) => {
+                console.error('Помилка:', error);
+
+            });
+
+
+        });
+
+
+        /*
+                function greet(name) {
+                    console.log('Привіт, ${name}!');
+                }
+                greet('Світ');
+        
+                function processUserInput(callback) {
+                    const name = prompt('Будь ласка, введіть своє iм`я:');
+                    callback(name);
+                }
+        
+                processUserInput(greet);
+        
+                const button = document.getElementById('myButton');
+                button.addEventListener('click', () => {
+                    alert('Button was clicked!');
+                });
+        */
+    </script>
+</body>
+
+</html>
