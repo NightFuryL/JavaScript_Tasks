@@ -1,0 +1,48 @@
+.upload-container {
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: var(--color_back_color);
+}
+
+.upload-container input[type="file"] {
+    color: var(--color_text);
+    cursor: pointer;
+}
+
+.json-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #001833;
+    color: var(--color_text);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.json-table th,
+.json-table td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: left;
+    vertical-align: top;
+}
+
+.json-table th {
+    background: var(--color_btn);
+    font-weight: bold;
+}
+
+.json-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.json-table pre {
+    margin: 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: #4da6ff;
+    font-size: 13px;
+}
