@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Resources/General_styles/style1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 1-->
+    <section class="first-section">
+        <p class="task-number">Ex. num 1</p>
+        <hr>
+        <div class="task">
+            <div class="formatter-container">
+                <div class="header-row">
+                    <div class="header-title">Enter JSON data:</div>
+                    <div id="error-message" class="error-text hidden">[format error]</div>
+                    <div class="header-title">Formatted JSON data:</div>
+                </div>
+
+                <div class="editor-row">
+                    <textarea id="json-input" spellcheck="false"></textarea>
+
+                    <div class="button-wrapper">
+                        <button id="format-btn" title="Format JSON">&#9654;</button>
+                    </div>
+
+                    <textarea id="json-output" readonly spellcheck="false"></textarea>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./JSFiles/first.js"></script>
+</body>
+
+</html>
