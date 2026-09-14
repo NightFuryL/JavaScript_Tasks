@@ -1,0 +1,84 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+
+const cards = [
+{
+title: 'JavaScript Developer',
+description: 'Вивчіть основи JS, роботу з DOM, fetch API та створення інтерактивних веб-додатків.',
+},
+{
+title: 'Python для Back-end',
+description: 'Дізнайтеся про розробку серверної частини веб-додатків, роботу з базами даних та створення RESTful API.',
+},
+{
+title: 'C++ Game Development',
+description: 'Вивчіть основи C++ та розробку ігор, включаючи роботу з графікою, фізикою та оптимізацією
+продуктивності.',
+}
+];
+---
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="icon" href="/favicon.ico" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>Astro</title>
+	<style>
+		body {
+			font-family: system-ui, sans-serif;
+			line-height: 1.4;
+			margin: 0;
+			padding: 0;
+			color: #fff;
+			background-color: #1a1a1a;
+		}
+
+		.card-container {
+			max-width: 1000;
+			margin: 60px auto;
+			padding: 0 20px;
+		}
+
+		.courses-section {
+			max-width: 1000px;
+			margin: 60px auto;
+			padding: 0 20px;
+		}
+
+		.courses-section h2 {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.grid {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+	</style>
+</head>
+
+<body>
+	<Header />
+	<Hero />
+	<main class="courses-section" id="courses">
+		<h2>Наші напрямки</h2>
+		<div class="grid">
+			{
+			courses.map((course) => (
+			<Card title={course.title} description={course.description} />
+			))
+			}
+		</div>
+	</main>
+	<Footer />
+</body>
+
+</html>
