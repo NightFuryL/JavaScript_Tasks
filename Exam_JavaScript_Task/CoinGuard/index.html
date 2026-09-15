@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinGuard — Облік фінансів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Шапка -->
+        <header class="app-header">
+            <div class="logo">
+                <h1>CoinGuard</h1>
+            </div>
+            <p class="subtitle">Контроль та облік особистих фінансів</p>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card balance">
+                <span class="stat-label">Загальний баланс</span>
+                <span class="stat-value" id="totalBalance">0 ₴</span>
+            </div>
+            <div class="stat-card income">
+                <span class="stat-label">Всього доходів</span>
+                <span class="stat-value" id="totalIncome">+0 ₴</span>
+            </div>
+            <div class="stat-card expense">
+                <span class="stat-label">Всього витрат</span>
+                <span class="stat-value" id="totalExpense">-0 ₴</span>
+            </div>
+        </section>
+
+        <section class="currency-section">
+            <button id="convertBtn" class="btn-secondary">
+                🌐 Конвертувати баланс (USD / EUR)
+            </button>
+            <div id="currencyStatus" class="currency-status"></div>
+            <div id="currencyResults" class="currency-results hidden">
+                <div class="currency-item"><strong>USD:</strong> <span id="usdValue">$0.00</span></div>
+                <div class="currency-item"><strong>EUR:</strong> <span id="eurValue">€0.00</span></div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Нова транзакція</h2>
+            <form id="transactionForm" class="transaction-form" novalidate>
+                <div class="form-group">
+                    <label for="textInput">Назва транзакції</label>
+                    <input 
+                        type="text" 
+                        id="textInput" 
+                        placeholder="Наприклад: Продукти, Зарплата"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="amountInput">Сума (₴)</label>
+                        <input type="number"  id="amountInput" placeholder="0.00" step="0.01" min="0.01"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="typeSelect">Тип</label>
+                        <select id="typeSelect">
+                            <option value="expense">Витрата (-)</option>
+                            <option value="income">Дохід (+)</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="errorMessage" class="error-message"></div>
+
+                <button type="submit" class="btn-primary">Додати транзакцію</button>
+            </form>
+        </section>
+
+        <!-- Список транзакцій -->
+        <section class="history-section">
+            <h2>Історія транзакцій</h2>
+            <ul id="transactionList" class="transaction-list">
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <p>Транзакцій поки немає. Додайте першу запис вище!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="./JSFiles/exam_app.js"></script>
+</body>
+</html>
