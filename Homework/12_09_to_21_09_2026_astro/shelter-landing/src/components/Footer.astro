@@ -1,0 +1,38 @@
+---
+// Footer.astro
+const currentYear = new Date().getFullYear();
+---
+<footer class="footer" id="contacts">
+    <div class="contacts">
+        <span>📍 м. Одеса</span>
+        <span>|</span>
+        <span>📞 +38 (000) 000-00-00</span>
+    </div>
+    <div class="copyright">
+        © {currentYear} Центр прилаштування "Вухаті друзі".
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: #333333;
+        color: #cccccc;
+        text-align: center;
+        padding: 25px 20px;
+        font-size: 0.85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .copyright {
+        opacity: 0.8;
+    }
+</style>

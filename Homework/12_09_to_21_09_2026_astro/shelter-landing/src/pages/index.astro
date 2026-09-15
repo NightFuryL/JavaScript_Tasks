@@ -1,0 +1,91 @@
+---
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import PetCard from '../components/PetCard.astro';
+import Footer from '../components/Footer.astro';
+// Прикладі тварин для демонстраціїї
+const pets = [
+    {
+        name: "Джесі",
+        breed: "Врятована з вулиці, стерилізована, спокійно носить шлейку та намордник.",
+        age: "1 рік",
+        imageUrl: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=400&auto=format&fit=crop"
+    },
+    {
+        name: "Арчі",
+        breed: "Енергійний джек-рассел, обожнює бігати за м'ячем.",
+        age: "2 роки",
+        imageUrl: "https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=400&auto=format&fit=crop"
+    },
+    {
+        name: "Байт",
+        breed: "Спокійний метис лабрадора. Ідеальний компаньйон для вечірніх прогулянок.",
+        age: "4 роки",
+        imageUrl: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=400&auto=format&fit=crop"
+    }
+];
+---
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вухаті друзі — Центр прилаштування тварин</title>
+</head>
+<body>
+
+    <Header />
+    <Hero />
+
+    <main class="pets-section" id="pets">
+        <h2>Чекають на родину</h2>
+        <div class="pets-grid">
+            {pets.map(pet => (
+                <PetCard 
+                    name={pet.name} 
+                    breed={pet.breed} 
+                    age={pet.age} 
+                    imageUrl={pet.imageUrl} 
+                />
+            ))}
+        </div>
+    </main>
+
+    <Footer />
+
+</body>
+</html>
+
+<style is:global>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+        background-color: #f9f9f9;
+        color: #333333;
+    }
+
+    .pets-section {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .pets-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .pets-grid {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+</style>
